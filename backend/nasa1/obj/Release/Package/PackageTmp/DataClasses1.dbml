@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database1" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Database1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.sensorReadings" Member="sensorReadings">
+    <Type Name="sensorReading">
+      <Column Name="readingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="host" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="area" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="sensorError" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.uvIndexs" Member="uvIndexes">
+    <Type Name="uvIndex">
+      <Column Name="readingDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="host" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="area" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UVI" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
